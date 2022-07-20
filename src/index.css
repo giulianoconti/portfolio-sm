@@ -346,6 +346,7 @@ body {
   margin: 86px auto 0 auto;
   left: 0;
   right: 0;
+  padding: 0;
 }
 
 .project-navigation-button {
@@ -695,11 +696,12 @@ body {
   }
 
   .project-navigation {
-    width: 380px;
+    width: 280px;
   }
 
   .project-navigation-button {
     height: 200px;
+    padding: 0;
   }
 
   /* --------------- CONTACT section --------------- */
