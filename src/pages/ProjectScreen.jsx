@@ -3,7 +3,7 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    img: "src/imgs/projects/sokoban.jpg",
+    img: "sokoban",
     href: "https://sokoban-giulianoconti.vercel.app/",
     title: "Sokoban Juego",
     description:
@@ -11,35 +11,35 @@ const projects = [
   },
   {
     id: 2,
-    img: "src/imgs/projects/pokemon.jpg",
+    img: "pokemon",
     href: "https://giuliannt.github.io/devlights-homework-2/",
     title: "Pokemon Buscador",
     description: "Sitio web donde hay que registrarse para poder buscar los pokemones.",
   },
   {
     id: 3,
-    img: "src/imgs/projects/weather.jpg",
+    img: "weather",
     href: "https://clima-xi.vercel.app/",
     title: "Clima",
     description: "Página donde podemos seleccionar distintas localidades argentinas y obtener el clima actual y de la semana.",
   },
   {
     id: 4,
-    img: "src/imgs/projects/worldCupPredictions.jpg",
+    img: "predic",
     href: "https://giuliannt.github.io/world-cup-predictions/",
     title: "Predicciones del Mundial",
     description: "Página donde podemos hacer nuestra predicción para el mundial de futbol 2022.",
   },
   {
     id: 5,
-    img: "src/imgs/projects/login.jpg",
+    img: "login",
     href: "https://giuliannt.github.io/devlights-homework-1/",
     title: "Inicio de Sesión",
     description: "Formulario falso donde nos podemos registrar y acceder como alumno o profesor.",
   },
   {
     id: 6,
-    img: "src/imgs/projects/taTeTi.jpg",
+    img: "tateti",
     href: "https://giuliannt.github.io/tic-tac-toe/",
     title: "Ta Te Ti",
     description: "Juego donde el ganador es el que consiga formar 3 en línea con su figura.",
@@ -72,7 +72,7 @@ export const ProjectScreen = () => {
         <div className={`project-container-transform transform-${projectNumber}`}>
           {projects.map((project) => (
             <a className="project-card" href={project.href} key={project.id}>
-              <div className="project-card-image" alt={project.title} style={{ backgroundImage: `url(${project.img})` }}>
+              <div className={`project-card-image img-${project.img}`} alt={project.title}>
                 <div className="project-card-info">
                   <div className="project-card-title">{project.title}</div>
                 </div>

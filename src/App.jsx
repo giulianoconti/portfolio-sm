@@ -26,6 +26,12 @@ export const App = () => {
     <div>
       <div>
         <div className="absolute card-main-container">
+          <div className="preload-bg-img">
+            <div className="container-img-intro" />
+            <div className="container-img-about" />
+            <div className="container-img-projects" />
+            <div className="container-img-contact" />
+          </div>
           <h1 className="card-main-title">GIULIANO CONTI</h1>
           <p className="card-main-subtitle">React developer</p>
           <div className="card-main-icons-container">

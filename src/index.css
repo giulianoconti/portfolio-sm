@@ -43,6 +43,12 @@ body {
   transition: opacity 1s;
 }
 
+.preload-bg-img {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -442,6 +448,30 @@ body {
   .project-container-transform {
     width: 600px;
     height: 337.5px;
+  }
+
+  .img-sokoban {
+    background-image: url("/src/imgs/projects/sokoban.jpg");
+  }
+
+  .img-pokemon {
+    background-image: url("src/imgs/projects/pokemon.jpg");
+  }
+
+  .img-weather {
+    background-image: url("/src/imgs/projects/weather.jpg");
+  }
+
+  .img-predic {
+    background-image: url("/src/imgs/projects/worldCupPredictions.jpg");
+  }
+
+  .img-login {
+    background-image: url("/src/imgs/projects/login.jpg");
+  }
+
+  .img-tateti {
+    background-image: url("/src/imgs/projects/taTeTi.jpg");
   }
 
   .transform-1 {
