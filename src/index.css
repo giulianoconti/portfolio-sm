@@ -72,7 +72,7 @@ body {
 }
 
 .card-main-icon-a:hover .card-main-icon-svg {
-  color: rgb(150, 50, 150)
+  color: rgb(150, 50, 150);
 }
 
 .card-main-icon-svg {
@@ -129,6 +129,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-height: 900px) {
+  .container-img {
+    height: 1100px;
+  }
 }
 
 /* --------------- INTRO section --------------- */
@@ -193,7 +203,7 @@ body {
   flex-direction: column;
   max-width: 296px;
   float: right;
-  margin: 86px 86px 0 0;
+  margin: 16px 86px 0 0;
   padding: 60px 40px;
 }
 
@@ -550,8 +560,44 @@ body {
     top: 200px;
   }
 
+  .card-main-container {
+    padding: 10px 20px;
+    margin: 32px;
+  }
+
   .height-for-absolutes {
     height: 532px;
+  }
+
+  /* --------------- INTRO section --------------- */
+  .card-intro-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .card-intro-title {
+    padding: 0;
+    font-size: 28px;
+    margin-left: 20px;
+  }
+
+  .card-intro-subtitle-container {
+    padding: 20px;
+  }
+
+  .card-intro-subtitle {
+    margin: 10px 0;
+  }
+
+  .card-intro-btn {
+    margin-left: 20px;
+  }
+
+  /* --------------- ABOUT section --------------- */
+  .card-about-container {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
   }
 
   /* --------------- PROJECTS section --------------- */
@@ -561,7 +607,10 @@ body {
 
   .project-container-transform {
     width: 200px;
-    height: 112.5px;
+    height: 200px;
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
   }
 
   .transform-1 {
@@ -585,7 +634,7 @@ body {
 
   .project-card {
     width: 200px;
-    height: 212.5px;
+    height: 200px;
   }
 
   .project-card:hover .project-card-description {
@@ -603,8 +652,10 @@ body {
 
   .project-card-image {
     background-size: 200px;
+    background-position-y: center;
     width: 200px;
-    height: 112.5px;
+    height: 200px;
+    background-color: rgb(150, 50, 150);
   }
 
   .project-card-title {
@@ -620,6 +671,70 @@ body {
   }
 
   .project-navigation-button {
-    height: 112.5px;
+    height: 200px;
+  }
+
+  /* --------------- CONTACT section --------------- */
+  .contact-container {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.75);
+    flex-direction: column;
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 32px;
+  }
+
+  .contact-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 16px;
+  }
+
+  .contact-input:focus {
+    color: rgb(10, 10, 10, 0.75);
+    border-bottom: 1px solid rgb(150, 50, 150);
+  }
+
+  .contact-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 64px;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+    margin-top: 32px;
+  }
+
+  .contact-btn:hover {
+    color: rgb(150, 50, 150);
+    border-bottom: 1px solid rgb(150, 50, 150);
+  }
+
+  .textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  .contact-footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .submit-state {
+    color: rgb(150, 50, 150);
+    height: 50px;
+    width: 164px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -90,7 +90,7 @@ export const App = () => {
 
       <CSSTransition
         nodeRef={pageOne}
-        className="absolute container-img container-img-intro"
+        className="container-img container-img-intro"
         in={page === 0}
         timeout={1000}
         classNames="page-transition"
