@@ -346,8 +346,6 @@ body {
   margin: 86px auto 0 auto;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .project-navigation-button {
@@ -359,14 +357,13 @@ body {
 }
 
 .project-navigation-button-text {
-  display: flex;
-  justify-items: center;
-  justify-content: center;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-navigation-button-text:hover {
