@@ -362,7 +362,6 @@ body {
   padding: 5px;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
-  margin-right: 30px;
 }
 
 .project-navigation-button-text:hover {
@@ -696,7 +695,7 @@ body {
   }
 
   .project-navigation {
-    width: 280px;
+    width: 380px;
   }
 
   .project-navigation-button {
