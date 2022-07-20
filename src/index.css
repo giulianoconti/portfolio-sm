@@ -706,64 +706,22 @@ body {
 
   /* --------------- CONTACT section --------------- */
   .contact-container {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.75);
-    flex-direction: column;
-    max-width: 400px;
     padding: 20px;
     margin: 0 32px;
   }
 
   .contact-input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    height: 50px;
-    font-size: 18px;
-    outline: none;
-    margin-bottom: 16px;
-  }
-
-  .contact-input:focus {
-    color: rgb(10, 10, 10, 0.75);
-    border-bottom: 1px solid rgb(150, 50, 150);
+    padding: 0;
   }
 
   .contact-btn {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    height: 50px;
-    width: 64px;
-    font-size: 18px;
-    cursor: pointer;
-    float: right;
-    margin-top: 32px;
-  }
-
-  .contact-btn:hover {
-    color: rgb(150, 50, 150);
-    border-bottom: 1px solid rgb(150, 50, 150);
-  }
-
-  .textarea {
-    height: 120px;
-    resize: none;
+    padding: 0;
   }
 
   .contact-footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .submit-state {
-    color: rgb(150, 50, 150);
-    height: 50px;
-    width: 164px;
-    margin-top: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
   }
 }
