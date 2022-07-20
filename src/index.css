@@ -143,7 +143,7 @@ body {
 
 /* --------------- INTRO section --------------- */
 .container-img-intro {
-  background-image: url("/img/photo-02.jpg");
+  background-image: url("/src/imgs/photo-02.jpg");
 }
 
 .card-intro-container {
@@ -194,7 +194,7 @@ body {
 
 /* --------------- ABOUT section --------------- */
 .container-img-about {
-  background-image: url("/img/photo-03.jpg");
+  background-image: url("/src/imgs/photo-03.jpg");
 }
 
 .card-about-container {
@@ -238,7 +238,7 @@ body {
 
 /* --------------- PROJECTS section --------------- */
 .container-img-projects {
-  background-image: url("/img/photo-04.jpg");
+  background-image: url("/src/imgs/photo-04.jpg");
 }
 
 .project-container {
@@ -367,7 +367,7 @@ body {
 
 /* --------------- CONTACT section --------------- */
 .container-img-contact {
-  background-image: url("/img/photo-05.jpg");
+  background-image: url("/src/imgs/photo-05.jpg");
 }
 
 .contact-container {
