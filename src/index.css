@@ -364,6 +364,7 @@ body {
   padding: 5px;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
+  margin: 0 auto;
 }
 
 .project-navigation-button-text:hover {
@@ -455,7 +456,7 @@ body {
   }
 
   .img-pokemon {
-    background-image: url("src/imgs/projects/pokemon.jpg");
+    background-image: url("/src/imgs/projects/pokemon.jpg");
   }
 
   .img-weather {
@@ -719,7 +720,6 @@ body {
     border: none;
     border-bottom: 1px solid rgb(0, 0, 0);
     height: 50px;
-    width: 100%;
     font-size: 18px;
     outline: none;
     margin-bottom: 16px;
