@@ -8,6 +8,7 @@ import photo02 from "./imgs/photo-02.webp";
 import photo03 from "./imgs/photo-03.webp";
 import photo04 from "./imgs/photo-04.webp";
 import photo05 from "./imgs/photo-05.webp";
+import { LoadingScreen } from "./pages/LoadingScreen";
 
 export const App = () => {
   const [page, setPage] = useState(0);
@@ -28,18 +29,9 @@ export const App = () => {
     uploadedImage04.src = photo04;
     const uploadedImage05 = new Image();
     uploadedImage05.src = photo05;
-    const images = [photo02, photo03, photo04, photo05];
-    let loadedImages = 0;
-    images.forEach((image) => {
-      const img = new Image();
-      img.src = image;
-      img.onload = () => {
-        loadedImages++;
-        if (loadedImages === images.length) {
-          setIsLoading(false);
-        }
-      };
-    });
+    uploadedImage05.onload = () => {
+      setIsLoading(false);
+    }
   }, []);
 
   const changePage = ({ target: { value } }) => {
@@ -50,13 +42,7 @@ export const App = () => {
     setShowMenu(!showMenu);
   };
 
-  if (isLoading) {
-    return (
-      <div className="loading-container">
-        <div className="loading-text">Cargando...</div>
-      </div>
-    );
-  }
+  if (isLoading) return <LoadingScreen />;
 
   return (
     <div>

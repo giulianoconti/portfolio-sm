@@ -57,6 +57,21 @@ body {
   visibility: hidden;
 }
 
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid rgb(150, 50, 150);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+  margin: 30vh auto 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .card-main-container {
   display: flex;
   flex-direction: column;
@@ -183,12 +198,6 @@ body {
 
 .card-intro-subtitle {
   color: rgb(200, 200, 200);
-  font-size: 18px;
-  margin: 8px 0;
-}
-
-.loading-text {
-  color: rgb(255, 255, 255);
   font-size: 18px;
   margin: 8px 0;
 }
