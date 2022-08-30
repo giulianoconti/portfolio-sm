@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from 'prop-types';
+
 export const IntroScreen = ({ setPage }) => {
   const goToAbout = () => {
     setPage(1);
@@ -19,3 +22,7 @@ export const IntroScreen = ({ setPage }) => {
     </>
   );
 };
+
+IntroScreen.propTypes = {
+  setPage: PropTypes.func.isRequired,
+}

@@ -1,18 +1,46 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { AboutScreen } from "./pages/AboutScreen";
 import { ContactScreen } from "./pages/ContactScreen";
 import { IntroScreen } from "./pages/IntroScreen";
 import { ProjectScreen } from "./pages/ProjectScreen";
+import photo02 from "./imgs/photo-02.webp";
+import photo03 from "./imgs/photo-03.webp";
+import photo04 from "./imgs/photo-04.webp";
+import photo05 from "./imgs/photo-05.webp";
 
 export const App = () => {
   const [page, setPage] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const menuRef = useRef(null);
   const pageOne = useRef(null);
   const pageTwo = useRef(null);
   const pageThree = useRef(null);
   const pageFour = useRef(null);
+
+  useEffect(() => {
+    const uploadedImage02 = new Image();
+    uploadedImage02.src = photo02;
+    const uploadedImage03 = new Image();
+    uploadedImage03.src = photo03;
+    const uploadedImage04 = new Image();
+    uploadedImage04.src = photo04;
+    const uploadedImage05 = new Image();
+    uploadedImage05.src = photo05;
+    const images = [photo02, photo03, photo04, photo05];
+    let loadedImages = 0;
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+          setIsLoading(false);
+        }
+      };
+    });
+  }, []);
 
   const changePage = ({ target: { value } }) => {
     setPage(parseInt(value));
@@ -22,20 +50,22 @@ export const App = () => {
     setShowMenu(!showMenu);
   };
 
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-text">Cargando...</div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div>
         <div className="absolute card-main-container">
-          <div className="preload-bg-img">
-            <div className="container-img-intro" />
-            <div className="container-img-about" />
-            <div className="container-img-projects" />
-            <div className="container-img-contact" />
-          </div>
           <h1 className="card-main-title">GIULIANO CONTI</h1>
           <p className="card-main-subtitle">React developer</p>
           <div className="card-main-icons-container">
-            <a className="card-main-icon-a" href="https://www.linkedin.com/in/giulianoconti/">
+            <a className="card-main-icon-a" aria-label="Linkedin" href="https://www.linkedin.com/in/giulianoconti/">
               <svg className="card-main-icon-svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                 <path
                   fillRule="evenodd"
@@ -45,7 +75,7 @@ export const App = () => {
               </svg>
             </a>
 
-            <a className="card-main-icon-a" href="https://github.com/GiuliannT">
+            <a className="card-main-icon-a" aria-label="Github" href="https://github.com/GiuliannT">
               <svg className="card-main-icon-svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
@@ -55,7 +85,7 @@ export const App = () => {
               </svg>
             </a>
 
-            <a className="card-main-icon-a" href="https://www.instagram.com/giulianocontii/">
+            <a className="card-main-icon-a" aria-label="Instagram" href="https://www.instagram.com/giulianocontii/">
               <svg className="card-main-icon-svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
@@ -72,7 +102,14 @@ export const App = () => {
             MENU
           </button>
 
-          <CSSTransition nodeRef={menuRef} in={showMenu} timeout={300} classNames="menu-transition" unmountOnExit mountOnEnter>
+          <CSSTransition
+            nodeRef={menuRef}
+            in={showMenu}
+            timeout={300}
+            classNames="menu-transition"
+            unmountOnExit
+            mountOnEnter
+          >
             <div ref={menuRef}>
               <button className={`menu-btn ${page === 0 && "menu-btn-active"}`} value={0} onClick={changePage}>
                 INTRO

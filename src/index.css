@@ -53,6 +53,10 @@ body {
   position: absolute;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .card-main-container {
   display: flex;
   flex-direction: column;
@@ -149,7 +153,7 @@ body {
 
 /* --------------- INTRO section --------------- */
 .container-img-intro {
-  background-image: url("/src/imgs/photo-02.jpg");
+  background-image: url("/src/imgs/photo-02.webp");
 }
 
 .card-intro-container {
@@ -183,6 +187,12 @@ body {
   margin: 8px 0;
 }
 
+.loading-text {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin: 8px 0;
+}
+
 .card-intro-btn {
   background-color: rgb(255, 255, 255);
   border: none;
@@ -200,7 +210,7 @@ body {
 
 /* --------------- ABOUT section --------------- */
 .container-img-about {
-  background-image: url("/src/imgs/photo-03.jpg");
+  background-image: url("/src/imgs/photo-03.webp");
 }
 
 .card-about-container {
@@ -244,20 +254,26 @@ body {
 
 /* --------------- PROJECTS section --------------- */
 .container-img-projects {
-  background-image: url("/src/imgs/photo-04.jpg");
+  background-image: url("/src/imgs/photo-04.webp");
+}
+
+.project-title {
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  font-weight: 100;
+  margin: 30px 0 10px 0;
+  text-align: center;
 }
 
 .project-container {
   position: absolute;
   width: 800px;
   overflow: hidden;
-  margin: 86px auto 0 auto;
+  margin: auto;
   background-color: rgb(150, 50, 150);
   color: rgb(255, 255, 255);
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 999;
 }
 
@@ -268,28 +284,32 @@ body {
   transition: transform 0.3s;
 }
 
+.img-blackjack {
+  background-image: url("/src/imgs/projects/blackjack.webp");
+}
+
 .img-sokoban {
-  background-image: url("/src/imgs/projects/sokoban.jpg");
+  background-image: url("/src/imgs/projects/sokoban.webp");
 }
 
 .img-pokemon {
-  background-image: url("/src/imgs/projects/pokemon.jpg");
+  background-image: url("/src/imgs/projects/pokemon.webp");
 }
 
 .img-weather {
-  background-image: url("/src/imgs/projects/weather.jpg");
+  background-image: url("/src/imgs/projects/weather.webp");
 }
 
 .img-predic {
-  background-image: url("/src/imgs/projects/worldCupPredictions.jpg");
+  background-image: url("/src/imgs/projects/worldCupPredictions.webp");
 }
 
 .img-login {
-  background-image: url("/src/imgs/projects/login.jpg");
+  background-image: url("/src/imgs/projects/login.webp");
 }
 
 .img-tateti {
-  background-image: url("/src/imgs/projects/taTeTi.jpg");
+  background-image: url("/src/imgs/projects/taTeTi.webp");
 }
 
 .transform-1 {
@@ -309,6 +329,9 @@ body {
 }
 .transform-6 {
   transform: translateX(-4000px);
+}
+.transform-7 {
+  transform: translateX(-4800px);
 }
 
 .project-card {
@@ -367,7 +390,7 @@ body {
   justify-content: space-between;
   width: 880px;
   overflow: hidden;
-  margin: 86px auto 0 auto;
+  margin: auto;
   left: 0;
   right: 0;
   padding: 0;
@@ -396,7 +419,7 @@ body {
 
 /* --------------- CONTACT section --------------- */
 .container-img-contact {
-  background-image: url("/src/imgs/photo-05.jpg");
+  background-image: url("/src/imgs/photo-05.webp");
 }
 
 .contact-container {
@@ -491,6 +514,9 @@ body {
   .transform-6 {
     transform: translateX(-3000px);
   }
+  .transform-7 {
+    transform: translateX(-3600px);
+  }
 
   .project-card {
     z-index: 9999;
@@ -554,6 +580,9 @@ body {
   }
   .transform-6 {
     transform: translateX(-2500px);
+  }
+  .transform-7 {
+    transform: translateX(-3000px);
   }
 
   .project-card {
@@ -630,6 +659,10 @@ body {
   }
 
   /* --------------- PROJECTS section --------------- */
+  .project-title {
+    font-size: 32px;
+  }
+
   .project-container {
     width: 200px;
   }
@@ -659,6 +692,9 @@ body {
   }
   .transform-6 {
     transform: translateX(-1000px);
+  }
+  .transform-7 {
+    transform: translateX(-1200px);
   }
 
   .project-card {
