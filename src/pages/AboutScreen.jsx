@@ -24,7 +24,7 @@ export const AboutScreen = ({ setPage }) => {
         <h1 className="card-about-title">Sobre Mí</h1>
         <p className="card-about-subtitle">Soy de Resistencia, Argentina. Tengo {getAge("2001-03-07")} años.</p>
         <p className="card-about-subtitle">
-          Mis pasatiempos son programar, diseñar planos 3D en SketchUp, juntarme con amigos, jugar videojuegos y andar
+          Me gusta programar, diseñar planos 3D en SketchUp, juntarme con amigos, jugar videojuegos, jugar padel y andar
           en bici.
         </p>
         <button className="card-about-btn" onClick={goToProjects}>
