@@ -7,40 +7,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu-transition-enter {
-  opacity: 0;
-}
-
-.menu-transition-enter-active {
+.menu {
+  transition: all 0.3s ease;
   opacity: 1;
-  transition: opacity 0.3s;
+  margin-top: 50px;
 }
 
-.menu-transition-exit {
-  opacity: 1;
-}
-
-.menu-transition-exit-active {
+.hidden-menu {
+  transition: all 0.3s ease;
   opacity: 0;
-  transition: opacity 0.3s;
+  visibility: hidden;
 }
 
-.page-transition-enter {
-  opacity: 0;
-}
-
-.page-transition-enter-active {
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.page-transition-exit {
+.page {
+  transition: all 0.5s ease;
   opacity: 1;
 }
 
-.page-transition-exit-active {
+.hidden-page {
+  transition: all 0.3s ease;
   opacity: 0;
-  transition: opacity 1s;
+  visibility: hidden;
 }
 
 .preload-bg-img {

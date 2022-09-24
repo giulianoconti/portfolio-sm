@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import React, { useEffect, useState } from "react";
 import { AboutScreen } from "./pages/AboutScreen";
 import { ContactScreen } from "./pages/ContactScreen";
 import { IntroScreen } from "./pages/IntroScreen";
@@ -14,11 +13,6 @@ export const App = () => {
   const [page, setPage] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const menuRef = useRef(null);
-  const pageOne = useRef(null);
-  const pageTwo = useRef(null);
-  const pageThree = useRef(null);
-  const pageFour = useRef(null);
 
   useEffect(() => {
     const uploadedImage02 = new Image();
@@ -31,7 +25,7 @@ export const App = () => {
     uploadedImage05.src = photo05;
     uploadedImage05.onload = () => {
       setIsLoading(false);
-    }
+    };
   }, []);
 
   const changePage = ({ target: { value } }) => {
@@ -88,90 +82,49 @@ export const App = () => {
             MENU
           </button>
 
-          <CSSTransition
-            nodeRef={menuRef}
-            in={showMenu}
-            timeout={300}
-            classNames="menu-transition"
-            unmountOnExit
-            mountOnEnter
-          >
-            <div ref={menuRef}>
-              <button className={`menu-btn ${page === 0 && "menu-btn-active"}`} value={0} onClick={changePage}>
-                INTRO
-              </button>
+          <div className={`menu ${showMenu ? "" : "hidden-menu"}`}>
+            <button className={`menu-btn ${page === 0 && "menu-btn-active"}`} value={0} onClick={changePage}>
+              INTRO
+            </button>
 
-              <button className={`menu-btn ${page === 1 && "menu-btn-active"}`} value={1} onClick={changePage}>
-                SOBRE MI
-              </button>
+            <button className={`menu-btn ${page === 1 && "menu-btn-active"}`} value={1} onClick={changePage}>
+              SOBRE MI
+            </button>
 
-              <button className={`menu-btn ${page === 2 && "menu-btn-active"}`} value={2} onClick={changePage}>
-                PROYECTOS
-              </button>
+            <button className={`menu-btn ${page === 2 && "menu-btn-active"}`} value={2} onClick={changePage}>
+              PROYECTOS
+            </button>
 
-              <button className={`menu-btn ${page === 3 && "menu-btn-active"}`} value={3} onClick={changePage}>
-                CONTACTO
-              </button>
-            </div>
-          </CSSTransition>
+            <button className={`menu-btn ${page === 3 && "menu-btn-active"}`} value={3} onClick={changePage}>
+              CONTACTO
+            </button>
+          </div>
         </div>
       </div>
 
-      <CSSTransition
-        nodeRef={pageOne}
-        className="container-img container-img-intro"
-        in={page === 0}
-        timeout={1000}
-        classNames="page-transition"
-        unmountOnExit
-        mountOnEnter
+      <section
+        className={`page absolute container-img container-img-intro ${page === 0 ? "show-page" : "hidden-page"}`}
       >
-        <section ref={pageOne}>
-          <IntroScreen setPage={setPage} />
-        </section>
-      </CSSTransition>
+        <IntroScreen setPage={setPage} />
+      </section>
 
-      <CSSTransition
-        nodeRef={pageTwo}
-        className="absolute container-img container-img-about"
-        in={page === 1}
-        timeout={1000}
-        classNames="page-transition"
-        unmountOnExit
-        mountOnEnter
+      <section
+        className={`page absolute container-img container-img-about ${page === 1 ? "show-page" : "hidden-page"}`}
       >
-        <section ref={pageTwo}>
-          <AboutScreen setPage={setPage} />
-        </section>
-      </CSSTransition>
+        <AboutScreen setPage={setPage} />
+      </section>
 
-      <CSSTransition
-        nodeRef={pageThree}
-        className="absolute container-img container-img-projects"
-        in={page === 2}
-        timeout={1000}
-        classNames="page-transition"
-        unmountOnExit
-        mountOnEnter
+      <section
+        className={`page absolute container-img container-img-projects ${page === 2 ? "show-page" : "hidden-page"}`}
       >
-        <section ref={pageThree}>
-          <ProjectScreen />
-        </section>
-      </CSSTransition>
+        <ProjectScreen />
+      </section>
 
-      <CSSTransition
-        nodeRef={pageFour}
-        className="absolute container-img container-img-contact"
-        in={page === 3}
-        timeout={1000}
-        classNames="page-transition"
-        unmountOnExit
-        mountOnEnter
+      <section
+        className={`page absolute container-img container-img-contact ${page === 3 ? "show-page" : "hidden-page"}`}
       >
-        <section ref={pageFour}>
-          <ContactScreen />
-        </section>
-      </CSSTransition>
+        <ContactScreen />
+      </section>
     </div>
   );
 };
