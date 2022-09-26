@@ -28,8 +28,8 @@ const projects = [
     id: 5,
     img: "removeBg",
     href: "https://remove-background-react-giulianoconti.vercel.app/",
-    title: "Remover Color de Fondo",
-    description: "App donde puedes remover un color en específico de una imagen.",
+    title: "Eliminar Fondo",
+    description: "App donde puedes remover uno o vario colores de una imagen.",
   },
 
   {
