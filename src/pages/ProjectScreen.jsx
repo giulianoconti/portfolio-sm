@@ -11,6 +11,13 @@ const projects = [
   },
   {
     id: 2,
+    img: "createResume",
+    href: "https://create-your-resume.vercel.app/",
+    title: "Crear CV",
+    description: "Crea tu CV simplemente completando un formulario con esta aplicación.",
+  },
+  {
+    id: 3,
     img: "sokoban",
     href: "https://sokoban-giulianoconti.vercel.app/",
     title: "Sokoban Juego",
@@ -18,14 +25,22 @@ const projects = [
       "Es un videojuego de rompecabezas donde el jugador empuja cajas en un almacén, tratando de llevarlos a los lugares de almacenamiento.",
   },
   {
-    id: 3,
+    id: 5,
+    img: "removeBg",
+    href: "https://remove-background-react-giulianoconti.vercel.app/",
+    title: "Remover Color de Fondo",
+    description: "App donde puedes remover un color en específico de una imagen.",
+  },
+
+  {
+    id: 5,
     img: "pokemon",
     href: "https://giuliannt.github.io/devlights-homework-2/",
     title: "Pokemon Buscador",
     description: "Sitio web donde hay que registrarse para poder buscar los pokemones.",
   },
   {
-    id: 4,
+    id: 6,
     img: "weather",
     href: "https://clima-xi.vercel.app/",
     title: "Clima",
@@ -33,21 +48,21 @@ const projects = [
       "Página donde podemos seleccionar distintas localidades argentinas y obtener el clima actual y de la semana.",
   },
   {
-    id: 5,
+    id: 7,
     img: "predic",
     href: "https://giuliannt.github.io/world-cup-predictions/",
     title: "Predicciones del Mundial",
     description: "Página donde podemos hacer nuestra predicción para el mundial de futbol 2022.",
   },
   {
-    id: 6,
+    id: 8,
     img: "login",
     href: "https://giuliannt.github.io/devlights-homework-1/",
     title: "Inicio de Sesión",
     description: "Formulario falso donde nos podemos registrar y acceder como alumno o profesor.",
   },
   {
-    id: 7,
+    id: 9,
     img: "tateti",
     href: "https://giuliannt.github.io/tic-tac-toe/",
     title: "Ta Te Ti",
@@ -60,14 +75,14 @@ export const ProjectScreen = () => {
 
   const previousProject = () => {
     if (projectNumber === 1) {
-      setProjectNumber(7);
+      setProjectNumber(9);
     } else {
       setProjectNumber(projectNumber - 1);
     }
   };
 
   const nextProject = () => {
-    if (projectNumber === 7) {
+    if (projectNumber === 9) {
       setProjectNumber(1);
     } else {
       setProjectNumber(projectNumber + 1);

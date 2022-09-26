@@ -308,6 +308,14 @@ body {
   background-image: url("/src/imgs/projects/taTeTi.webp");
 }
 
+.img-createResume {
+  background-image: url("/src/imgs/projects/createResume.webp");
+}
+
+.img-removeBg {
+  background-image: url("/src/imgs/projects/removeBg.webp");
+}
+
 .transform-1 {
   transform: translateX(0%);
 }
@@ -328,6 +336,12 @@ body {
 }
 .transform-7 {
   transform: translateX(-4800px);
+}
+.transform-8 {
+  transform: translateX(-5600px);
+}
+.transform-9 {
+  transform: translateX(-6400px);
 }
 
 .project-card {
@@ -513,6 +527,13 @@ body {
   .transform-7 {
     transform: translateX(-3600px);
   }
+  .transform-8 {
+    transform: translateX(-4200px);
+  }
+  .transform-9 {
+    transform: translateX(-4800px);
+  }
+
 
   .project-card {
     z-index: 9999;
@@ -579,6 +600,12 @@ body {
   }
   .transform-7 {
     transform: translateX(-3000px);
+  }
+  .transform-8 {
+    transform: translateX(-3500px);
+  }
+  .transform-9 {
+    transform: translateX(-4000px);
   }
 
   .project-card {
@@ -691,6 +718,12 @@ body {
   }
   .transform-7 {
     transform: translateX(-1200px);
+  }
+  .transform-8 {
+    transform: translateX(-1400px);
+  }
+  .transform-9 {
+    transform: translateX(-1600px);
   }
 
   .project-card {
