@@ -25,7 +25,7 @@ const projects = [
       "Es un videojuego de rompecabezas donde el jugador empuja cajas en un almacén, tratando de llevarlos a los lugares de almacenamiento.",
   },
   {
-    id: 5,
+    id: 4,
     img: "removeBg",
     href: "https://remove-background-react-giulianoconti.vercel.app/",
     title: "Eliminar Fondo",

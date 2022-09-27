@@ -83,19 +83,19 @@ export const App = () => {
           </button>
 
           <div className={`menu ${showMenu ? "" : "hidden-menu"}`}>
-            <button className={`menu-btn ${page === 0 && "menu-btn-active"}`} value={0} onClick={changePage}>
+            <button className={`menu-btn ${page === 0 ? "menu-btn-active" : ""}`} value={0} onClick={changePage}>
               INTRO
             </button>
 
-            <button className={`menu-btn ${page === 1 && "menu-btn-active"}`} value={1} onClick={changePage}>
+            <button className={`menu-btn ${page === 1 ? "menu-btn-active" : ""}`} value={1} onClick={changePage}>
               SOBRE MI
             </button>
 
-            <button className={`menu-btn ${page === 2 && "menu-btn-active"}`} value={2} onClick={changePage}>
+            <button className={`menu-btn ${page === 2 ? "menu-btn-active" : ""}`} value={2} onClick={changePage}>
               PROYECTOS
             </button>
 
-            <button className={`menu-btn ${page === 3 && "menu-btn-active"}`} value={3} onClick={changePage}>
+            <button className={`menu-btn ${page === 3 ? "menu-btn-active" : ""}`} value={3} onClick={changePage}>
               CONTACTO
             </button>
           </div>
