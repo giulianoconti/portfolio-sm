@@ -1,4 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import blackjack from "../imgs/projects/blackjack.webp";
+import createResume from "../imgs/projects/createResume.webp";
+import login from "../imgs/projects/login.webp";
+import pokemon from "../imgs/projects/pokemon.webp";
+import removeBg from "../imgs/projects/removeBg.webp";
+import sokoban from "../imgs/projects/sokoban.webp";
+import taTeTi from "../imgs/projects/taTeTi.webp";
+import weather from "../imgs/projects/weather.webp";
+import worldCupPredictions from "../imgs/projects/worldCupPredictions.webp";
+import { LoadingScreen } from "./LoadingScreen";
 
 const projects = [
   {
@@ -72,6 +82,31 @@ const projects = [
 
 export const ProjectScreen = () => {
   const [projectNumber, setProjectNumber] = useState(1);
+  const [loadingProjects, setLoadingProjects] = useState(true);
+
+  useEffect(() => {
+    const uploadedImage01 = new Image();
+    uploadedImage01.src = blackjack;
+    const uploadedImage02 = new Image();
+    uploadedImage02.src = createResume;
+    const uploadedImage03 = new Image();
+    uploadedImage03.src = login;
+    const uploadedImage04 = new Image();
+    uploadedImage04.src = pokemon;
+    const uploadedImage05 = new Image();
+    uploadedImage05.src = removeBg;
+    const uploadedImage06 = new Image();
+    uploadedImage06.src = sokoban;
+    const uploadedImage07 = new Image();
+    uploadedImage07.src = taTeTi;
+    const uploadedImage08 = new Image();
+    uploadedImage08.src = weather;
+    const uploadedImage09 = new Image();
+    uploadedImage09.src = worldCupPredictions;
+    uploadedImage04.onload = () => {
+      setLoadingProjects(false);
+    };
+  }, []);
 
   const previousProject = () => {
     if (projectNumber === 1) {
@@ -95,42 +130,50 @@ export const ProjectScreen = () => {
       <p className="project-title">PROYECTOS</p>
       <div className="project-container">
         <div className={`project-container-transform transform-${projectNumber}`}>
-          {projects.map((project) => (
-            <a className="project-card" href={project.href} key={project.id}>
-              <div className={`project-card-image img-${project.img}`} alt={project.title}>
-                <div className="project-card-info">
-                  <div className="project-card-title">{project.title}</div>
+          {loadingProjects ? (
+            <LoadingScreen />
+          ) : (
+            projects.map((project) => (
+              <a className="project-card" href={project.href} key={project.id}>
+                <div className={`project-card-image img-${project.img}`} alt={project.title}>
+                  <div className="project-card-info">
+                    <div className="project-card-title">{project.title}</div>
+                  </div>
                 </div>
-              </div>
-              <div className="project-card-description">{project.description}</div>
-            </a>
-          ))}
+                <div className="project-card-description">{project.description}</div>
+              </a>
+            ))
+          )}
         </div>
       </div>
 
       <div className="project-navigation">
-        <button className="project-navigation-button" onClick={previousProject}>
-          <svg
-            className="project-navigation-button-text"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-          </svg>
-        </button>
-        <button className="project-navigation-button" onClick={nextProject}>
-          <svg
-            className="project-navigation-button-text"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-          </svg>
-        </button>
+        {!loadingProjects && (
+          <>
+            <button className="project-navigation-button" onClick={previousProject}>
+              <svg
+                className="project-navigation-button-text"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+              </svg>
+            </button>
+            <button className="project-navigation-button" onClick={nextProject}>
+              <svg
+                className="project-navigation-button-text"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+              </svg>
+            </button>
+          </>
+        )}
       </div>
     </>
   );

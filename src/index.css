@@ -51,7 +51,12 @@ body {
   width: 60px;
   height: 60px;
   animation: spin 1.5s linear infinite;
-  margin: 30vh auto 0 auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
 }
 
 @keyframes spin {
@@ -266,7 +271,7 @@ body {
   width: 800px;
   overflow: hidden;
   margin: auto;
-  background-color: rgb(150, 50, 150);
+  background-color: black;
   color: rgb(255, 255, 255);
   left: 0;
   right: 0;
@@ -274,10 +279,11 @@ body {
 }
 
 .project-container-transform {
+  background-color: black;
   display: flex;
-  width: 800px;
   height: 450px;
   transition: transform 0.3s;
+  width: 800px;
 }
 
 .img-blackjack {
@@ -381,17 +387,18 @@ body {
 }
 
 .project-card-description {
-  transition: transform 0.3s;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  line-height: 26px;
-  position: absolute;
-  width: 100%;
-  margin: 0;
   background-color: rgb(150, 50, 150);
   bottom: -70px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  height: 61px;
+  line-height: 26px;
+  margin: 0;
   padding-bottom: 10px;
+  position: absolute;
+  text-align: center;
+  transition: transform 0.3s;
+  width: 100%;
 }
 
 .project-navigation {
@@ -693,7 +700,6 @@ body {
   .project-container-transform {
     width: 200px;
     height: 200px;
-    background-color: aqua;
     margin: 0;
     padding: 0;
   }
