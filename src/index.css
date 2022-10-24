@@ -60,8 +60,12 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .card-main-container {
@@ -290,12 +294,24 @@ body {
   background-image: url("/src/imgs/projects/blackjack.webp");
 }
 
+.img-createResume {
+  background-image: url("/src/imgs/projects/createResume.webp");
+}
+
 .img-sokoban {
   background-image: url("/src/imgs/projects/sokoban.webp");
 }
 
+.img-removeBg {
+  background-image: url("/src/imgs/projects/removeBg.webp");
+}
+
 .img-pokemon {
   background-image: url("/src/imgs/projects/pokemon.webp");
+}
+
+.img-informatorio {
+  background-image: url("/src/imgs/projects/informatorio.webp");
 }
 
 .img-weather {
@@ -312,14 +328,6 @@ body {
 
 .img-tateti {
   background-image: url("/src/imgs/projects/taTeTi.webp");
-}
-
-.img-createResume {
-  background-image: url("/src/imgs/projects/createResume.webp");
-}
-
-.img-removeBg {
-  background-image: url("/src/imgs/projects/removeBg.webp");
 }
 
 .transform-1 {
@@ -348,6 +356,9 @@ body {
 }
 .transform-9 {
   transform: translateX(-6400px);
+}
+.transform-10 {
+  transform: translateX(-7200px);
 }
 
 .project-card {
@@ -540,7 +551,9 @@ body {
   .transform-9 {
     transform: translateX(-4800px);
   }
-
+  .transform-10 {
+    transform: translateX(-5400px);
+  }
 
   .project-card {
     z-index: 9999;
@@ -613,6 +626,9 @@ body {
   }
   .transform-9 {
     transform: translateX(-4000px);
+  }
+  .transform-10 {
+    transform: translateX(-4500px);
   }
 
   .project-card {
@@ -730,6 +746,9 @@ body {
   }
   .transform-9 {
     transform: translateX(-1600px);
+  }
+  .transform-10 {
+    transform: translateX(-1800px);
   }
 
   .project-card {

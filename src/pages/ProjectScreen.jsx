@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import blackjack from "../imgs/projects/blackjack.webp";
 import createResume from "../imgs/projects/createResume.webp";
-import login from "../imgs/projects/login.webp";
-import pokemon from "../imgs/projects/pokemon.webp";
-import removeBg from "../imgs/projects/removeBg.webp";
 import sokoban from "../imgs/projects/sokoban.webp";
-import taTeTi from "../imgs/projects/taTeTi.webp";
+import removeBg from "../imgs/projects/removeBg.webp";
+import pokemon from "../imgs/projects/pokemon.webp";
+import informatorio from "../imgs/projects/informatorio.webp";
 import weather from "../imgs/projects/weather.webp";
 import worldCupPredictions from "../imgs/projects/worldCupPredictions.webp";
+import login from "../imgs/projects/login.webp";
+import taTeTi from "../imgs/projects/taTeTi.webp";
 import { LoadingScreen } from "./LoadingScreen";
 
 const projects = [
@@ -39,7 +40,7 @@ const projects = [
     img: "removeBg",
     href: "https://remove-background-react-giulianoconti.vercel.app/",
     title: "Eliminar Fondo",
-    description: "App donde puedes remover uno o vario colores de una imagen.",
+    description: "App donde puedes remover uno o varios colores de una imagen.",
   },
 
   {
@@ -51,6 +52,13 @@ const projects = [
   },
   {
     id: 6,
+    img: "informatorio",
+    href: "https://github.com/GiuliannT/tp-info-react-2022",
+    title: "Noticias",
+    description: "Web para mantenerte informado.",
+  },
+  {
+    id: 7,
     img: "weather",
     href: "https://clima-xi.vercel.app/",
     title: "Clima",
@@ -58,21 +66,21 @@ const projects = [
       "Página donde podemos seleccionar distintas localidades argentinas y obtener el clima actual y de la semana.",
   },
   {
-    id: 7,
+    id: 8,
     img: "predic",
     href: "https://giuliannt.github.io/world-cup-predictions/",
     title: "Predicciones del Mundial",
-    description: "Página donde podemos hacer nuestra predicción para el mundial de futbol 2022.",
-  },
-  {
-    id: 8,
-    img: "login",
-    href: "https://giuliannt.github.io/devlights-homework-1/",
-    title: "Inicio de Sesión",
-    description: "Formulario falso donde nos podemos registrar y acceder como alumno o profesor.",
+    description: "Página donde podemos hacer nuestra predicción para el mundial de fútbol 2022.",
   },
   {
     id: 9,
+    img: "login",
+    href: "https://giuliannt.github.io/devlights-homework-1/",
+    title: "Inicio de Sesión",
+    description: "Formulario donde nos podemos registrar y acceder como alumno o profesor.",
+  },
+  {
+    id: 10,
     img: "tateti",
     href: "https://giuliannt.github.io/tic-tac-toe/",
     title: "Ta Te Ti",
@@ -94,30 +102,32 @@ export const ProjectScreen = () => {
     const uploadedImage04 = new Image();
     uploadedImage04.src = pokemon;
     const uploadedImage05 = new Image();
-    uploadedImage05.src = removeBg;
+    uploadedImage05.src = informatorio;
     const uploadedImage06 = new Image();
-    uploadedImage06.src = sokoban;
+    uploadedImage06.src = removeBg;
     const uploadedImage07 = new Image();
-    uploadedImage07.src = taTeTi;
+    uploadedImage07.src = sokoban;
     const uploadedImage08 = new Image();
-    uploadedImage08.src = weather;
+    uploadedImage08.src = taTeTi;
     const uploadedImage09 = new Image();
-    uploadedImage09.src = worldCupPredictions;
-    uploadedImage04.onload = () => {
+    uploadedImage09.src = weather;
+    const uploadedImage10 = new Image();
+    uploadedImage10.src = worldCupPredictions;
+    uploadedImage05.onload = () => {
       setLoadingProjects(false);
     };
   }, []);
 
   const previousProject = () => {
     if (projectNumber === 1) {
-      setProjectNumber(9);
+      setProjectNumber(10);
     } else {
       setProjectNumber(projectNumber - 1);
     }
   };
 
   const nextProject = () => {
-    if (projectNumber === 9) {
+    if (projectNumber === 10) {
       setProjectNumber(1);
     } else {
       setProjectNumber(projectNumber + 1);
