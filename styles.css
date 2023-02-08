@@ -1,0 +1,689 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* ---------------------------------- ( NAVBAR ) ---------------------------------- */
+
+#navbar {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.6s ease;
+  width: 100%;
+  z-index: 100;
+}
+
+#navbar::after {
+  background-size: 150%;
+  background: url("assets/bg.svg") bottom center;
+  content: "";
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.nav_list {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 56px 0 0;
+}
+
+.nav_item {
+  display: flex;
+  height: 100%;
+  margin: 0 8px;
+}
+
+.nav_link {
+  align-items: center;
+  border-top: 2px solid transparent;
+  color: rgb(0, 0, 0);
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 8px 0;
+  padding: 0 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.active {
+  border-top: 2px solid rgb(0, 0, 0);
+  scale: 1.1;
+}
+
+.menu_btn {
+  display: none;
+}
+
+/* ---------------------------------- SECTION 1 ( HOME ) ---------------------------------- */
+
+#home {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 76px 16px 16px 16px;
+  position: relative;
+}
+
+#home::after {
+  background-size: 150%;
+  background: url("assets/bg.svg") bottom center;
+  content: "";
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.home_title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.home_subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.nav_logo {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin-left: 8px;
+  width: 48px;
+}
+
+.nav_logo_img {
+  height: 100%;
+  width: 100%;
+}
+
+.home_btn {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  justify-content: center;
+  margin-top: 32px;
+  outline: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.home_btn_text {
+  margin-left: 8px;
+}
+
+/* ---------------------------------- SECTION 2 ( ABOUT ) ---------------------------------- */
+
+#about {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(245, 248, 245) 0%, rgb(255, 255, 255) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.about_container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px;
+  width: 100%;
+}
+
+.about_left_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.about_left_title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about_left_info {
+  display: flex;
+  margin-bottom: 16px;
+  width: 100%;
+  line-height: 2;
+}
+
+.about_left_info p {
+  margin-left: 8px;
+}
+
+.about_left_info p span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about_left_img {
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.about_skills_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.about_skills_title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about_skills_bar {
+  background-color: rgb(200, 200, 200);
+  border-radius: 4px;
+  height: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.about_skills_bar_fill {
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  height: 8px;
+  width: 100%;
+}
+
+.about_right_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.about_right_img {
+  height: 100px;
+  margin: 16px;
+  width: 100px;
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------------------------------- SECTION 3 ( PROJECTS ) ---------------------------------- */
+
+#projects {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 16px;
+  position: relative;
+}
+
+#projects::after {
+  background-size: 150%;
+  background: url("assets/bg.svg") bottom center;
+  content: "";
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.projects_container {
+  align-items: center;
+  background-color: rgb(230, 235, 230);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 960px;
+}
+
+.projects_buttons_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.projects_button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  margin: 0 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.projects_button_img {
+  height: 100%;
+  width: 96px;
+}
+
+.projects_title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.projects_list {
+  background-color: rgb(230, 235, 230);
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.project {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  width: 100%;
+}
+
+.project_img {
+  border-radius: 4px 0 0 4px;
+  height: 410px;
+  width: 728px;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 16px;
+  width: 200px;
+}
+
+.project_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project_description {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.project_links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 8px;
+  padding: 0;
+}
+
+.project_link_svg {
+  color: rgb(0, 0, 0);
+  height: 40px;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+/* ---------------------------------- SECTION 4 ( CONTACT ) ---------------------------------- */
+
+#contact {
+  align-items: center;
+  background-color: rgb(245, 248, 245);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.contact_container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+  max-width: 1200px;
+  padding: 16px;
+  width: 100%;
+}
+
+.contact_form {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 16px;
+  height: 40vh;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact_title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contact_label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact_input {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  height: 48px;
+  margin-bottom: 8px;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+}
+
+.contact_textarea {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  height: 200px;
+  margin-bottom: 8px;
+  outline: none;
+  padding: 8px;
+  resize: none;
+  width: 100%;
+}
+
+.contact_btn {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(220, 220, 220);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  height: 48px;
+  margin-left: auto;
+  outline: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.contact_social {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact_social_link {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.contact_social_img {
+  height: 60px;
+  margin: 8px;
+  transition: all 0.3s ease;
+  width: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects_container {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #navbar {
+    background-color: transparent;
+  }
+
+  #navbar::after {
+    display: none;
+  }
+
+  .nav_logo {
+    display: none;
+  }
+
+  .nav_list {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    transform: translateX(-140%);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .nav_list_active {
+    transform: translateX(0%);
+  }
+
+  .nav_item {
+    height: 25%;
+    width: 100%;
+  }
+
+  .nav_link {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .active {
+    background-color: rgb(220, 220, 220);
+    border-top: 2px solid transparent;
+    scale: 1;
+  }
+
+  .menu_btn {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .about_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about_right_img {
+    height: 64px;
+    margin: 16px;
+    width: 64px;
+  }
+
+  .projects_container {
+    scale: 0.6;
+  }
+
+  .contact_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact_form {
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .contact_social {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .about_left_info {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projects_container {
+    scale: 1;
+    width: 400px;
+  }
+
+  .project {
+    flex-direction: column;
+    margin: 8px 0;
+  }
+
+  .project_img {
+    height: 200px;
+    width: 400px;
+  }
+
+  .project_info {
+    width: 100%;
+  }
+
+  .projects_title {
+    font-size: 24px;
+  }
+
+  .project_title {
+    font-size: 24px;
+  }
+
+  .project_description {
+    font-size: 16px;
+  }
+
+  .project_link_svg {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .projects_container {
+    width: 280px;
+  }
+
+  .project_img {
+    height: 200px;
+    width: 280px;
+  }
+}
+
+@media (pointer: fine) {
+  .nav_link:hover {
+    scale: 1.1;
+  }
+
+  .home_btn:hover {
+    scale: 1.1;
+  }
+
+  .projects_button:hover {
+    scale: 1.1;
+  }
+
+  .project_link_svg:hover {
+    scale: 1.1;
+  }
+
+  .contact_social_img:hover {
+    scale: 1.1;
+  }
+
+  .contact_btn:hover {
+    scale: 1.05;
+  }
+}
+
+.d_none {
+  display: none;
+}
